@@ -1,0 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Product */
+    --brand-color-light: #60A5FA;
+    --brand-color-dark: #1D4ED8;
+    /* Base*/
+    --bg-color: #0F172A;
+    --stroke-color:#1E293B;
+    /*Text*/
+    --text-color-primary: #f1f5ff;
+    --text-color-secondary: #CBD5E1;
+    /*Fonts*/
+    --font-family: "Archivo", Sans-serif;
+    --h1: 800 24px/135% var(--font-family);
+    --h2: 800 16px/140% var(--font-family);
+    --h3: 800 14px/140% var(--font-family);
+    --span: 600 14px/145%  var(--font-family);
+    --paragraph: 400 16px/140% var(--font-family);
+    --paragraph-sm: 400 14px/160% var(--font-family);
+
+}
+body {
+    color: var(--text-color-primary);
+    background-color: var(--bg-color);
+    font: var(--paragraph);
+}
+h1 {
+    font: var(--h1);
+}
+h2 {
+    font: var(--h2);
+}
+h3 {
+    font: var(--h3);
+}
+span {
+    font: var(--span);
+}
+a {
+     text-decoration: none;
+     color: inherit;
+}
+a:hover {
+    color: var(--brand-color-light);
+    transition: 1s;
+}
+/*h1,h2,h3 {
+    font:inherit;
+}*/
+.grid {
+    display: grid;
+}
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+img {
+    max-width: 100%;
+
+}
+.container {
+    max-width: 1280px;
+    padding-inline: 32px;
+    margin-inline:auto ;
+}
+main {
+    margin-top: 40px;
+    row-gap: 80px;
+    column-gap: 32px;
+
+    grid-template-columns: 2fr 1.5;
+
+    grid-template-areas: 
+    "featured featured" 
+    "weekly weekly"  
+      "ai  aside";
+}
+.content-tag {
+    display: inline-block;
+    background-color: var(--brand-color-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font: 500 10px/1.2 var(--font-family) ;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color-primary);
+    box-shadow: 0px 4px 16px black;
+}
